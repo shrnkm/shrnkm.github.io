@@ -46,25 +46,50 @@
             align-items: flex-end; /* Align items to the bottom */
             height: 100%; /* Occupy full height of column */
          }
-          h2 {
+         h2 {
               margin-bottom: -20px; /* Adjust margin to reduce space between h1 and p */
           }
           h2, p {
               color: #0a1524; /* Change text color */
               margin-left: 10px; /* Adjust margin to reduce space between h1 and p */
           }
+          /* Custom styling for empty columns */
+          .empty-column-A {
+              background-color: #C1B1AD;
+              width: 50px;
+              height: 80%;
+          }
+          .empty-column-B {
+              background-color: #1c6e8c;
+              width: 100px;
+              height: 20%;
+          }
+          .empty-column-C {
+              background-color: #274156;
+              width: 75px;
+              height: 30%;
+              align-items: flex-end; /* Align items to the bottom */
+              margin-top: 10 px;
+          }
+          .empty-column-D {
+              background-color: #F0F0F0;
+              width: 120px;
+              height: 98%;
+              margin-bottom: 10 px;
+<!--              margin-top: 10px; /* Adjust the margin-top value as needed */-->
+          }
       </style>
    </head>
    <body>
-      <div class="column"></div> <!-- Empty column -->
+      <div class="column empty-column-A"></div> <!-- Empty column with specific bg color -->
       <div class="column content">
          <img src="pix/shrnkm.png" alt="Me">
          <h2>Sahar Niknam</h2>
          <p>AI's rights activist.</p>
       </div>
-      <div class="column"></div> <!-- Empty column -->
-      <div class="column"></div> <!-- Empty column -->
-      <div class="column last-column">
+      <div class="column empty-column-B"></div> <!-- Empty column with specific bg color -->
+      <div class="column empty-column-C"></div> <!-- Empty column with specific bg color -->
+      <div class="column last-column empty-column-D">
          <img src="pix/other.png" alt="Other">
       </div>
    </body>
