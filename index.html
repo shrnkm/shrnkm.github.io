@@ -16,60 +16,55 @@
             background-color: #E1E0E0;
             display: flex;
             justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
+            align-items: flex-start; /* Align items to the top */
             height: 100vh; /* Set body height to 100% of viewport height */
-            margin: 0; /* Remove default body margin */
+            margin: 10; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            font-family: Avenir, sans-serif; /* Change font to Arial or fallback to sans-serif */
          }
-         .left-column {
-            width: 25%;
-            background-color: #BAB8B8;
-            border-radius: 15px; /* Add round edges to the left column */
-            margin-right: 10px; /* Add margin to the right side of the left column */
-            height: 49%; /* Set column height to 100% of viewport height */
-            margin-left: 10px; /* Add margin to the right side of the left column */
+         .column {
+            flex: 1; /* Equal width for all columns */
+            border-radius: 15px; /* Add round edges to columns */
+            margin: 0 5px; /* Add margin between columns */
+            padding: 10px; /* Add padding inside columns */
+            max-width: calc(20% - 10px); /* Set maximum width for each column */
+            box-sizing: border-box; /* Include padding in column width */
          }
-<!--         .right-column {-->
-<!--            width: 75%;-->
-<!--            background-color: #D6CAA9;-->
-<!--            border-radius: 15px; /* Add round edges to the right column */-->
-<!--            padding-left: 20px; /* Add left padding to the right column */-->
-<!--            padding-right: 10px; /* Add right padding to create space between columns */-->
-<!--            height: 98%; /* Set column height to 100% of viewport height */-->
-<!--            margin-right: 10px; /* Add margin to the right side of the left column */-->
-<!--            -->
-<!--         }-->
+         .content {
+            background-color: #BAB8B8; /* Background color for content columns */
+         }
          img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
+            width: 100%;
             height: auto;
-            display: block;
-            margin: 15px auto 0;
-            max-width: 90%;
-            max-height: 90%;
             border-radius: 15px;
+            display: block;
+            margin: 0 auto 15px; /* Add margin to bottom of image */
          }
-         h1, p {
-             font-family: Avenir, sans-serif; /* Change font to Arial or fallback to sans-serif */
-             margin: 20px 10; /* Adjust margin to reduce space between elements */
+         .last-column {
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: flex-end; /* Align items to the bottom */
+            height: 100%; /* Occupy full height of column */
          }
-        h1 {
-            margin-top: 5px 0; /* Add margin to the top of the h1 element */
-        }
-          p {
-              font-family: Avenir, sans-serif; /* Change font to Arial or fallback to sans-serif */
-              margin: -20px 0; /* Adjust margin to reduce space between paragraphs */
+          h1 {
+              margin-bottom: -20px; /* Adjust margin to reduce space between h1 and p */
+          }
+          h1, p {
+              color: #0a1524; /* Change text color */
           }
       </style>
    </head>
    <body>
-      <div class="left-column">
-         <img src="pix/shrnkm.png" alt="My profile picture">
+      <div class="column"></div> <!-- Empty column -->
+      <div class="column content">
+         <img src="pix/shrnkm.png" alt="Me">
          <h1>Sahar Niknam</h1>
-         <p>AI's rights activist'.</p>
+         <p>AI's rights activist.</p>
       </div>
-      <div class="right-column">
-
+      <div class="column"></div> <!-- Empty column -->
+      <div class="column"></div> <!-- Empty column -->
+      <div class="column last-column">
+         <img src="pix/other.png" alt="Other">
       </div>
    </body>
-</html> 
+</html>
